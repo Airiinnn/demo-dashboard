@@ -1,17 +1,17 @@
-Feb 07, 2025 1:08:32 AM reposense.system.LogsManager addFileHandler
+Feb 08, 2025 1:06:13 AM reposense.system.LogsManager addFileHandler
 INFO: Log temp folder has been successfully created
-Feb 07, 2025 1:08:32 AM reposense.parser.CsvParser validateHeader
+Feb 08, 2025 1:06:13 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
-Feb 07, 2025 1:08:32 AM reposense.parser.CsvParser validateHeader
+Feb 08, 2025 1:06:13 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Branch,  Author's Git Host ID,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-Feb 07, 2025 1:08:32 AM reposense.model.ConfigRunConfiguration getRepoConfigurations
+Feb 08, 2025 1:06:13 AM reposense.model.ConfigRunConfiguration getRepoConfigurations
 WARNING: No valid configurations in the author-config.csv.
 reposense.parser.exceptions.InvalidCsvException: No valid configurations in the author-config.csv.
 	at reposense.parser.CsvParser.parse(CsvParser.java:115)
 	at reposense.model.ConfigRunConfiguration.getRepoConfigurations(ConfigRunConfiguration.java:50)
 	at reposense.RepoSense.main(RepoSense.java:52)
 
-Feb 07, 2025 1:08:32 AM reposense.git.GitConfig getGlobalGitLfsConfig
+Feb 08, 2025 1:06:13 AM reposense.git.GitConfig getGlobalGitLfsConfig
 WARNING: Could not get global git lfs config
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
 fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
@@ -27,45 +27,45 @@ fatal: unable to read config file '/home/runner/.gitconfig': No such file or dir
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 3 more
 
-Feb 07, 2025 1:08:33 AM reposense.report.RepoCloner spawnCloneProcess
+Feb 08, 2025 1:06:13 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/reposense/RepoSense.git...
-Feb 07, 2025 1:08:33 AM reposense.report.RepoCloner spawnCloneProcess
+Feb 08, 2025 1:06:13 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/nus-cs3281/2025.git...
-Feb 07, 2025 1:08:33 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
-Feb 07, 2025 1:08:33 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 08, 2025 1:06:13 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/nus-cs3281/2025.git to complete...
-Feb 07, 2025 1:08:38 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 08, 2025 1:06:13 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
+Feb 08, 2025 1:06:18 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/nus-cs3281/2025.git completed!
-Feb 07, 2025 1:08:38 AM reposense.report.ReportGenerator analyzeRepos
+Feb 08, 2025 1:06:18 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [1/2] Analyzing https://github.com/nus-cs3281/2025.git (master)...
-Feb 07, 2025 1:08:38 AM reposense.report.ReportGenerator updateRepoConfig
+Feb 08, 2025 1:06:18 AM reposense.report.ReportGenerator updateRepoConfig
 INFO: https://github.com/nus-cs3281/2025.git (master) does not contain a standalone config file.
-Feb 07, 2025 1:08:38 AM reposense.report.ReportGenerator updateAuthorList
+Feb 08, 2025 1:06:18 AM reposense.report.ReportGenerator updateAuthorList
 INFO: https://github.com/nus-cs3281/2025.git (master) has no authors specified, using all authors by default.
-Feb 07, 2025 1:08:38 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Feb 08, 2025 1:06:18 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/nus-cs3281/2025.git (master)...
-Feb 07, 2025 1:08:38 AM reposense.authorship.FileInfoExtractor generateFileInfo
+Feb 08, 2025 1:06:18 AM reposense.authorship.FileInfoExtractor generateFileInfo
 WARNING: File "dashboard-contents-fragment.md" has 3020213B size. The file size limit is set at 500000B. Exact line diffs will be excluded from report...
-Feb 07, 2025 1:08:39 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 08, 2025 1:06:19 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/reposense/RepoSense.git completed!
-Feb 07, 2025 1:08:39 AM reposense.report.ReportGenerator analyzeRepos
+Feb 08, 2025 1:06:19 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [2/2] Analyzing https://github.com/reposense/RepoSense.git (master)...
-Feb 07, 2025 1:08:39 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Feb 08, 2025 1:06:19 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/reposense/RepoSense.git (master)...
-Feb 07, 2025 1:08:40 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Feb 08, 2025 1:06:20 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/reposense/RepoSense.git (master)...
-Feb 07, 2025 1:08:40 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 08, 2025 1:06:20 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/reposense/RepoSense.git (master)...
-Feb 07, 2025 1:08:40 AM reposense.report.ReportGenerator analyzeRepo
+Feb 08, 2025 1:06:20 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/reposense/RepoSense.git (master) completed!
-Feb 07, 2025 1:08:41 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Feb 08, 2025 1:06:21 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/nus-cs3281/2025.git (master)...
-Feb 07, 2025 1:08:42 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 08, 2025 1:06:22 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/nus-cs3281/2025.git (master)...
-Feb 07, 2025 1:08:42 AM reposense.report.ReportGenerator analyzeRepo
+Feb 08, 2025 1:06:22 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/nus-cs3281/2025.git (master) completed!
-Feb 07, 2025 1:08:42 AM reposense.report.ReportGenerator generateReposReport
+Feb 08, 2025 1:06:22 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/demo-dashboard/demo-dashboard/reposense-report
-Feb 07, 2025 1:08:42 AM reposense.RepoSense main
-INFO: Elapsed processing time: 9.89 second(s)
+Feb 08, 2025 1:06:22 AM reposense.RepoSense main
+INFO: Elapsed processing time: 8.93 second(s)
